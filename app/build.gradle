@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33
+    compileSdkVersion 33
+    buildToolsVersion '33.0.0'
+    namespace 'com.metris.vibrationfix'
+
+    defaultConfig {
+        applicationId "com.metris.vibrationfix"
+        minSdk 21 //5.0 Lollipop
+        targetSdk 33
+        versionCode 7
+        versionName "1.0.2"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+}

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name" translatable="false">Vibration Enable</string>
+    <string name="url_store" translatable="false">https://play.google.com/store/apps/dev?id=5916168791200129933</string>
+
+    <string name="dialog_title">Vibration Enable by Massi-X</string>
+    <string name="info_text">Vibration Enable is a simple app to restore vibration when the device has battery saver turned on.
+        \nBy default when battery saver is \'ON\' vibration will be disabled, I can understand why but if you leave the phone on vibrate mode only you will
+        miss everything because the phone will not ring nor vibrate.
+        \n
+        \nTo fix this simply enable accessibility service for the app, this will be enough to make the phone vibrate again. The accessibility service is only a dummy one,
+        no data will be ever collected.
+        \n
+        \nIf you would like to support my work you can buy one of my other apps, Thank you!
+        \nIf you like instead to stop me worrying you with this you can hide the icon 😭
+        \n
+        \n<a href="https://massi-x.github.io/vibration_enable/privacy/">Have a look at the privacy policy.</a>
+    </string>
+    <string name="info_accessibility">Turn on this to bring back vibration even when battery saver is ON. No data is used or collected!</string>
+    <string name="accessibility_page">Open Settings</string>
+    <string name="support_me">My Apps</string>
+    <string name="hide_app">Hide icon</string>
+    <string name="goodbye">Goodbye my lover…</string>
+    <string name="activity_not_found">Activity not found! Open the settings manually.</string>
+</resources>

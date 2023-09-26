@@ -1,0 +1,3 @@
+<resources>
+    <style name="Theme" parent="android:Theme.DeviceDefault.Light.Dialog.Alert"/>
+</resources>
