@@ -10,7 +10,7 @@
 </table>
 
 > [!NOTE]
-> Seems like that starting with Android 15 December Patch, the issue was finally fixed and this app is not needed anymore. I will keep it available for anyone that still find it useful.
+> Seems like that starting with Android 14 (2023 December Patch) the issue was finally fixed and this app is not needed anymore. I will keep it available for anyone that still find it useful.
 
 ## About this
 This simple app was born because I always missed calls when in battery saver with vibration mode enabled, but why? Because Google thinks that vibration consumes so much juice it is a good idea to disable it completely when the battery is low. While this is understandable, they should also consider that the phone won't ring, so how do you find out someone is calling?
