@@ -1,0 +1,34 @@
+name: Build Release APK
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Decode Keystore
+        env:
+            ENCODED_STRING: ${{ secrets.KEYSTORE }}
+        run: |
+            TMP_KEYSTORE_FILE_PATH="${RUNNER_TEMP}"/keystore
+            mkdir "${TMP_KEYSTORE_FILE_PATH}"
+            echo $ENCODED_STRING | base64 -di > "${TMP_KEYSTORE_FILE_PATH}"/keystore.jks
+      - uses: actions/checkout@v4
+      - name: set up JDK
+        uses: actions/setup-java@v5
+        with:
+          java-version: 17
+          distribution: jetbrains
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+      - name: build prod
+        run: ./gradlew assembleRelease
+        env:
+          SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
+          SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
+          SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: Build Artifacts
+          path: app/build/outputs/apk/release/app-release.apk
