@@ -10,8 +10,8 @@ android {
         applicationId "com.metris.vibrationfix"
         minSdk 21 //5.0 Lollipop
         targetSdk 35
-        versionCode 7
-        versionName "1.0.2"
+        versionCode 8
+        versionName "1.0.3"
     }
 
     buildTypes {
